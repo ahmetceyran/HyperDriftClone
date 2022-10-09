@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [SerializeField] float carSpeed;
+    [SerializeField] float maxSpeed;
     
     Vector3 moveVec;
 
@@ -18,6 +19,8 @@ public class CarController : MonoBehaviour
     {
         moveVec += transform.forward * carSpeed * Time.deltaTime;
         transform.position += moveVec * Time.deltaTime;
+
+        moveVec = Vector3.ClampMagnitude(moveVec, maxSpeed);
     }
     
 }
