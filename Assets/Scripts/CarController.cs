@@ -19,4 +19,5 @@ public class CarController : MonoBehaviour
         moveVec += transform.forward * carSpeed * Time.deltaTime;
         transform.position += moveVec * Time.deltaTime;
     }
+    
 }
