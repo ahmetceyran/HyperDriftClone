@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 5
+  maxSpeed: 10
 --- !u!1 &589938257
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +717,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.13371924, y: 0.69434804, z: -0.13371922, w: 0.69434804}
+  m_LocalRotation: {x: 0.13371924, y: 0.69434804, z: -0.1337192, w: 0.69434804}
   m_LocalPosition: {x: -11.169205, y: 2.25, z: -0.25958836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -820,7 +821,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011373665}
-  m_LocalRotation: {x: 0.13371924, y: 0.69434804, z: -0.13371922, w: 0.69434804}
+  m_LocalRotation: {x: 0.13371924, y: 0.69434804, z: -0.1337192, w: 0.69434804}
   m_LocalPosition: {x: -11.169205, y: 2.25, z: -0.25958836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
