@@ -314,6 +314,7 @@ MonoBehaviour:
   carSpeed: 5
   maxSpeed: 10
   SteerAngle: 20
+  Traction: 1
 --- !u!54 &301230400
 Rigidbody:
   m_ObjectHideFlags: 0

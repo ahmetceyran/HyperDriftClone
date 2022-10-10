@@ -7,6 +7,7 @@ public class CarController : MonoBehaviour
     [SerializeField] float carSpeed;
     [SerializeField] float maxSpeed;
     [SerializeField] float SteerAngle;
+    [SerializeField] float Traction;
     
     float dragAmount = 0.99f;
     
@@ -27,6 +28,7 @@ public class CarController : MonoBehaviour
 
         moveVec *= dragAmount;
         moveVec = Vector3.ClampMagnitude(moveVec, maxSpeed);
+        moveVec = Vector3.Lerp(moveVec.normalized, transform.forward, Traction * Time.deltaTime) * moveVec.magnitude;
     }
     
 }
