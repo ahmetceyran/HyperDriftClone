@@ -11,6 +11,9 @@ public class CarController : MonoBehaviour
     
     float dragAmount = 0.99f;
     
+    [SerializeField] private Transform lw, rw;
+
+    Vector3 rotVec;
     Vector3 moveVec;
 
     void Start()
@@ -24,11 +27,18 @@ public class CarController : MonoBehaviour
         moveVec += transform.forward * carSpeed * Time.deltaTime;
         transform.position += moveVec * Time.deltaTime;
 
+        rotVec += new Vector3(0, Input.GetAxis("Horizontal"), 0);
+
         transform.Rotate(Vector3.up * Input.GetAxis("Horizontal") * SteerAngle * Time.deltaTime * moveVec.magnitude);
 
         moveVec *= dragAmount;
         moveVec = Vector3.ClampMagnitude(moveVec, maxSpeed);
         moveVec = Vector3.Lerp(moveVec.normalized, transform.forward, Traction * Time.deltaTime) * moveVec.magnitude;
+
+        rotVec = Vector3.ClampMagnitude(rotVec, SteerAngle);
+
+        lw.localRotation = Quaternion.Euler(rotVec);
+        rw.localRotation = Quaternion.Euler(rotVec);
     }
     
 }
